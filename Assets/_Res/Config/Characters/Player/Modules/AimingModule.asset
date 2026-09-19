@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87bb221d885f2e644bcec57493e72633, type: 3}
+  m_Name: AimingModule
+  m_EditorClassIdentifier: 
+  AimSensitivity: 1
+  AimWalkSpeed: 1.5
+  AimJogSpeed: 2.5
+  AimSprintSpeed: 4
+  AimRotationSmoothTime: 0.04
+  AimXAnimBlendSmoothTime: 0.25
+  AimYAnimBlendSmoothTime: 0.25
+  AimIkChaseSmoothTime: 0.01
+  AimWalkMixer:
+    _FadeDuration: 0.25
+    _Speed: 1
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Animations:
+    - {fileID: 7400000, guid: eb79fda8688568e458663fefe15c3b56, type: 2}
+    - {fileID: 7400000, guid: a3255b621b52cab489eacb5d7d16560a, type: 2}
+    - {fileID: 7400000, guid: d72ae47fff0d49448b9c773d4ac275c7, type: 2}
+    - {fileID: 7400000, guid: 7bd4de774576df746ac4a59b0a900d3c, type: 2}
+    - {fileID: 7400000, guid: 30f9d8fd3ee82c043a3317bc00adf38d, type: 2}
+    - {fileID: 7400000, guid: d09597db04c03024db85f009bffbcc51, type: 2}
+    - {fileID: 7400000, guid: 71f78d175fb141b4b8c65454428efc4c, type: 2}
+    - {fileID: 7400000, guid: dedafc4d4fee2164aabf725af8511e1c, type: 2}
+    _Speeds: []
+    _SynchronizeChildren: 
+    _Thresholds:
+    - {x: 0, y: 1}
+    - {x: -0.71, y: 0.71}
+    - {x: -1, y: 0}
+    - {x: -0.71, y: -0.71}
+    - {x: 0, y: -1}
+    - {x: 0.71, y: -0.71}
+    - {x: 1, y: 0}
+    - {x: 0.71, y: 0.71}
+    _DefaultParameter: {x: 0, y: 0}
+    _Type: 0
+    _ParameterNameX: {fileID: 0}
+    _ParameterNameY: {fileID: 0}
+  AimJogMixer:
+    _FadeDuration: 0.25
+    _Speed: 1
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Animations:
+    - {fileID: 7400000, guid: b3b240c924963f540abf2d3840142a92, type: 2}
+    - {fileID: 7400000, guid: 84a61cedd9113ea4f9555a5b15024acb, type: 2}
+    - {fileID: 7400000, guid: 21f5418cdc7010a49a090bd93537901a, type: 2}
+    - {fileID: 7400000, guid: 353985edca94dec4bba1773c9aab05ac, type: 2}
+    - {fileID: 7400000, guid: 7ab2bb8ab5a1db549bc011d5db62137a, type: 2}
+    - {fileID: 7400000, guid: d75ad521a745c594fad4717a258a7f39, type: 2}
+    - {fileID: 7400000, guid: 012ae839063ab75459f059581d82783a, type: 2}
+    - {fileID: 7400000, guid: 4af4d99a5e2cca444a331873cc4c6d40, type: 2}
+    _Speeds: []
+    _SynchronizeChildren: 
+    _Thresholds:
+    - {x: 0, y: 1}
+    - {x: -0.71, y: 0.71}
+    - {x: -1, y: 0}
+    - {x: -0.71, y: -0.71}
+    - {x: 0, y: -1}
+    - {x: 0.71, y: -0.71}
+    - {x: 1, y: 0}
+    - {x: 0.71, y: 0.71}
+    _DefaultParameter: {x: 0, y: 0}
+    _Type: 0
+    _ParameterNameX: {fileID: 0}
+    _ParameterNameY: {fileID: 0}
+  AimSprintMixer:
+    _FadeDuration: 0.25
+    _Speed: 1
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Animations:
+    - {fileID: 7400000, guid: fdef4f571b28c054b974da40042b78ef, type: 2}
+    - {fileID: 7400000, guid: 37150a3d50a4cba49bd10dded6fdabe9, type: 2}
+    - {fileID: 7400000, guid: 7008de10f9088f14b8e506d29d86507a, type: 2}
+    - {fileID: 7400000, guid: f34777e4bb66d654c8bf239c5ace43ac, type: 2}
+    - {fileID: 7400000, guid: 167f0987b2cc4d14dbe6f3682bd022e0, type: 2}
+    - {fileID: 7400000, guid: d4b59e062a5e34145a27db4830e791b6, type: 2}
+    - {fileID: 7400000, guid: e0763086378c1854fbd1e4d5f900af77, type: 2}
+    - {fileID: 7400000, guid: f37c1f6c8952e514bae908216efd7c9a, type: 2}
+    _Speeds: []
+    _SynchronizeChildren: 
+    _Thresholds:
+    - {x: 0, y: 1}
+    - {x: -0.71, y: 0.71}
+    - {x: -1, y: 0}
+    - {x: -0.71, y: -0.71}
+    - {x: 0, y: -1}
+    - {x: 0.71, y: -0.71}
+    - {x: 1, y: 0}
+    - {x: 0.71, y: 0.71}
+    _DefaultParameter: {x: 0, y: 0}
+    _Type: 0
+    _ParameterNameX: {fileID: 0}
+    _ParameterNameY: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []

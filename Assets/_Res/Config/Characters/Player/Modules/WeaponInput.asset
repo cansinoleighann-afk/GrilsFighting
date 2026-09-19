@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
+  m_Name: WeaponInput
+  m_EditorClassIdentifier: 
+  m_ActionMaps:
+  - m_Name: Weapons
+    m_Id: 83f2dfc3-eaae-42d9-a7fd-d00f0316f2cc
+    m_Asset: {fileID: 11400000}
+    m_Actions:
+    - m_Name: Reload
+      m_Type: 1
+      m_ExpectedControlType: 
+      m_Id: efa23845-f885-4075-8e37-cfee1e51c6ec
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    - m_Name: CycleWeapon
+      m_Type: 1
+      m_ExpectedControlType: 
+      m_Id: 2c2bc69e-18ff-4548-b7cd-ed54a364955a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Bindings:
+    - m_Name: 
+      m_Id: 17c493ee-53a1-437f-b7d4-cc6b2b656a1b
+      m_Path: <Keyboard>/r
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Reload
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 98a358f5-e489-46d2-8cb1-6b88cf9426f6
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: CycleWeapon
+      m_Flags: 0
+  m_ControlSchemes: []
+  m_IsProjectWide: 0
