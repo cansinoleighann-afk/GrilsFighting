@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a516708f7c79d49a542e8eb67dd6ab, type: 3}
+  m_Name: "\u5217\u8868\u6570\u636E"
+  m_EditorClassIdentifier: 
+  list:
+  - key: "\u5927\u70AE1"
+    scale: 1
+    attack: 1.2
+    ll: 010000000200000003000000
+    ll_str:
+    - 1
+    - 2
+    obj: {fileID: 2547241664134097829, guid: 81127154174422844933df3c2d298587, type: 3}
+    pos: {x: 1, y: 2, z: 2.2}
+    icon: {fileID: 0}
+  - key: "\u5927\u70AE2"
+    scale: 2
+    attack: 2.2
+    ll: 010000000300000003000000
+    ll_str:
+    - "\u4F60\u597D"
+    - 2
+    obj: {fileID: 2547241664134097829, guid: 81127154174422844933df3c2d298587, type: 3}
+    pos: {x: 0, y: 0, z: 0}
+    icon: {fileID: 0}
+  - key: "\u5927\u70AE3"
+    scale: 3
+    attack: 3.2
+    ll: 010000000300000003000000
+    ll_str:
+    - 1
+    - 2
+    obj: {fileID: 0}
+    pos: {x: 0, y: 0, z: 0}
+    icon: {fileID: 0}
+  - key: "\u5927\u70AE4"
+    scale: 4
+    attack: 4.2
+    ll: 010000000300000003000000
+    ll_str:
+    - 1
+    - 2
+    obj: {fileID: 0}
+    pos: {x: 0, y: 0, z: 0}
+    icon: {fileID: 0}
+  - key: "\u5927\u70AE5"
+    scale: 5
+    attack: 5.2
+    ll: 010000000300000003000000
+    ll_str:
+    - 1
+    - 2
+    obj: {fileID: 0}
+    pos: {x: 0, y: 0, z: 0}
+    icon: {fileID: 0}

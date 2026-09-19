@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b60d6bb93a5ba4aacbb094dd62d50c, type: 3}
+  m_Name: "ReactionSet1"
+  m_EditorClassIdentifier: 
+  _leftFaceWeak:
+  - _animation: {fileID: 7400000, guid: 89473e9274884fd0bb02550b7cfd7b08, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 5fe1ca2d999a419eac9d6774bfbb7d49, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: b7425f1881d5459d83409a8e2521628e, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: e0d800fb026343f8b6700469df29357f, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: b7f10492417b427fb260115bcdbd099d, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  _rightFaceWeak:
+  - _animation: {fileID: 7400000, guid: 45a10d0b3a56439b99db6088dd868e36, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 5e79de8553e745508efc69434b922bfe, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: b7425f1881d5459d83409a8e2521628e, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: e0d800fb026343f8b6700469df29357f, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: b7f10492417b427fb260115bcdbd099d, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  _leftFaceHeavy:
+  - _animation: {fileID: 7400000, guid: 01a6f77e528e489fbba7f4ab03f8cc1e, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: dce3bd387a8440d6b41a4edef0b4d9ed, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: c5312dfa610a483f8b09c7703fb5f698, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  _rightFaceHeavy:
+  - _animation: {fileID: 7400000, guid: c2cefbdfe7d2402d9d364f5c299f0ab4, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: dce3bd387a8440d6b41a4edef0b4d9ed, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: c5312dfa610a483f8b09c7703fb5f698, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  _leftBodyWeak:
+  - _animation: {fileID: 7400000, guid: ace877643e4344b6a2af12e00a373ab4, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 99d6239fde2a45b3bc6309e1fb1e96fe, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: b13014f4ee87474db4d5da2e7ddfbf94, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: a81d2581331a447eb782f61be6649234, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  _rightBodyWeak:
+  - _animation: {fileID: 7400000, guid: 5f385fd677bc44d3a72c2df62cac43d6, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: ecffd08abc2a4eb790b2444d9d1fd6db, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: b13014f4ee87474db4d5da2e7ddfbf94, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: a81d2581331a447eb782f61be6649234, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  _leftBodyHeavy:
+  - _animation: {fileID: 7400000, guid: 597a422608ad4218b95b758ac98e155a, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 5e81e2af393d4bc19c1c0b58db0a5758, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 57c56a0e567a4828ab4d84fa32ab36f4, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 936cca70f0ff4853b74ec1fe2af97696, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  _rightBodyHeavy:
+  - _animation: {fileID: 7400000, guid: 37c38062af90445fb7a2365e5ce0bd86, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 08f60967d0f04d258e77b4594fa8b20d, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 57c56a0e567a4828ab4d84fa32ab36f4, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 936cca70f0ff4853b74ec1fe2af97696, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  _leftLegWeak:
+  - _animation: {fileID: 7400000, guid: 1de2ef61b7764f44924c737565b2c8e0, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 02950c794baf4290814488d9a46365a9, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  _rightLegWeak:
+  - _animation: {fileID: 7400000, guid: 6e8caceac1404dbfbc37dc937cdde628, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: a6bc353cf93540c6a01ac9cc4721c4f0, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  _leftLegHeavy:
+  - _animation: {fileID: 7400000, guid: f86a9791f853445790095c235c3c5d61, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  _rightLegHeavy:
+  - _animation: {fileID: 7400000, guid: b406ff730e7247c0ac6ad926607c38dc, type: 2}
+    _animationSpeed: 1.5
+    _mirrorAnimation: 0
+  _ground:
+  - _animation: {fileID: 7400000, guid: 1427613de1464fb9b2e2fbb08d2b31e7, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 664a9f36522a440bb09a413f13705813, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  _leftFaceEskiv:
+  - _animation: {fileID: 7400000, guid: 36b30eecacb9411d9dd33dbbbae1fb9e, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 360f92a4e08c47d99c8792de085e0abe, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 949bb678042a4d2c944b140d40ef4167, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  _rightFaceEskiv:
+  - _animation: {fileID: 7400000, guid: b841d5da2b55414885b7d5b473cb9078, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 360f92a4e08c47d99c8792de085e0abe, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 949bb678042a4d2c944b140d40ef4167, type: 2}
+    _animationSpeed: 1.3
+    _mirrorAnimation: 0
+  _bodyEskiv:
+  - _animation: {fileID: 7400000, guid: 153b830a3a95491da9c2f6aa06727ae9, type: 2}
+    _animationSpeed: 1.8
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: c089f73f2b6c4c4a9bec7ba25bf1e4e1, type: 2}
+    _animationSpeed: 1.8
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: bca3984946344929a77144216caeab73, type: 2}
+    _animationSpeed: 1.8
+    _mirrorAnimation: 0
+  _lowEskiv:
+  - _animation: {fileID: 7400000, guid: 078097ed307e4b8a97cdbb4c0792d753, type: 2}
+    _animationSpeed: 1.8
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 921f1c911dd446978ae968a7a43593cd, type: 2}
+    _animationSpeed: 1.8
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: c812df135e294bcb8c0f6bee30c166ef, type: 2}
+    _animationSpeed: 1.8
+    _mirrorAnimation: 0
+  _diesGround:
+  - _animation: {fileID: 7400000, guid: 1427613de1464fb9b2e2fbb08d2b31e7, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 664a9f36522a440bb09a413f13705813, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: f0d0072b05f949999233031c8db312d2, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  _diesStandingUp:
+  - _animation: {fileID: 7400000, guid: dddfb00bd54c4721904c95fd6fb66aa1, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 44b70a549e9e4b13bf78ec9ee40a7cf2, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  _diesStand:
+  - _animation: {fileID: 7400000, guid: db1972adfb3b4795b949f52a1d3e56d2, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 1c5e1d89db2946b899dc47e14d4e68c7, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 2396233b64734031b99c8b2192b3ce11, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 344e9366e35c43c3bfb62db16077a08b, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: fc120916c38140a4b5f4ff763a1d752f, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 8c7979177b414c7d80b6933f89171ee9, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 303276497513408c9efc4f33d9f1f478, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 75ba08d3368e4e1e80bf180765f9c516, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 4c63c9c7b6654c50958dd62398ceff27, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0
+  - _animation: {fileID: 7400000, guid: 5ec74e10fb8c438b9fc5720c80f09fcf, type: 2}
+    _animationSpeed: 1
+    _mirrorAnimation: 0

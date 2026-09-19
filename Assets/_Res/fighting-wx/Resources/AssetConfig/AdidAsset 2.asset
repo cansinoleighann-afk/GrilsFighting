@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ab3231510e6af47af667961b3d8a35, type: 3}
+  m_Name: AdidAsset 2
+  m_EditorClassIdentifier: 
+  is_show_ad: 1
+  is_show_view_inter: 1
+  no_show_inter_view:
+  - TipView
+  - WXAdView
+  - SignView
+  - PrivacyPolicy
+  - RecordView
+  ignore_TopViewNames:
+  - RecordView
+  is_show_view_banner: 0
+  show_banner_view:
+  - GameView
+  wx_appid: wx63b764a6009cb446
+  wx_video: adunit-8040e3ab06ee2d56
+  wx_inter: adunit-2fe46edb21f43b33
+  wx_banner:
+  - adunit-fe635d4d1b7e4704
+  - adunit-ca9f4bb0e969d39b
+  - adunit-9e21001bc74ad0a7
+  - adunit-5e0299eecd6db50d
+  - adunit-d49956cd2eca4aec
+  wx_ge_dan: adunit-c5759ba0d0e2afc0
+  wx_ge_duo: adunit-ee1421aaa228e85c
+  wx_ge_ju: adunit-86dcaf17a04098d9
+  wx_json_url: https://lingmeng-1317113396.cos.ap-guangzhou.myqcloud.com/test/online/wx/wx63b764a6009cb446/config.json
+  uma_appid: 6a98ee337431916083f6b476
+  wxVideoIcon:
+  - {fileID: 21300000, guid: c9c6bb28b83435c40a6aa9086775ad63, type: 3}
+  - {fileID: 21300000, guid: f4527872017446c46b753577627b93a4, type: 3}
+  - {fileID: 21300000, guid: 38b5909b551425c47919d4181c056157, type: 3}
+  - {fileID: 21300000, guid: 189ee666e51548369d244640fc9d35df, type: 3}

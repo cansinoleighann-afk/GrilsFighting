@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 25d7cc44a68d464a950fd24c622fde4a
+timeCreated: 1579903171
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: "DCC - Ash"
+  fontNames:
+  - DCC - Ash
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 

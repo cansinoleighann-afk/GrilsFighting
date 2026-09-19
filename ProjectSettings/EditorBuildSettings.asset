@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/PlayerAnimationTest.unity
+    path: Assets/_Scenes/Test/PlayerAnimationTest.unity
     guid: c11208727538cea468a9bd00e7f680d1
   - enabled: 1
     path: Assets/_Scenes/SampleScene.unity

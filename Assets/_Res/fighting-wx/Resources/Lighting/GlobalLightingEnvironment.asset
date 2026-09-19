@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5206d32050d4ffa4b97657ed54c8658d, type: 3}
+  m_Name: GlobalLightingEnvironment
+  m_EditorClassIdentifier: 
+  environmentLightingSource: 0
+  gradientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  gradientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  gradientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  ambientColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  ambientIntensity: 1
+  skybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  sunSource: {fileID: 4860881408573801691, guid: 548cf9a97095d054b90627447b884eb2,
+    type: 3}
+  reflectionIntensity: 1
+  fogEnabled: 0
+  fogMode: 3
+  fogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  fogDensity: 0.01
+  fogStartDistance: 0
+  fogEndDistance: 300
