@@ -2,68 +2,71 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraWalk : MonoBehaviour
+namespace CombatGirlsCharacterPack
 {
-    [Header("è®¾ç½®")]
-    public float moveSpeed = 10.0f;
-    [Header("è®¾ç½®")]
-    public float rotateSpeed = 500.0f;
-    [Header("è®¾ç½®")]
-    public float zoomSpeed = 10.0f;
-    [Header("è®¾ç½®")]
-    public float minFov = 15.0f;
-    public float maxFov = 90.0f;
-
-    protected bool isCursorVisible = true;
-
-    protected virtual void Start()
+    public class CameraWalk : MonoBehaviour
     {
+        [Header("Ä«¸Ş¶ó ÀÌµ¿¼Óµµ")]
+        public float moveSpeed = 10.0f;
+        [Header("Ä«¸Ş¶ó È¸Àü °¨µµ(¸¶¿ì½º)")]
+        public float rotateSpeed = 500.0f;
+        [Header("Ä«¸Ş¶ó ÁÜ ¼Óµµ")]
+        public float zoomSpeed = 10.0f;
+        [Header("Ä«¸Ş¶ó ÁÜ ÃÖ¼Ò/ÃÖ´ñ°ª")]
+        public float minFov = 15.0f;
+        public float maxFov = 90.0f;
 
-    }
+        protected bool isCursorVisible = true;
 
-    protected virtual void Update()
-    {
-        myCameraWalk();
-    }
-    protected virtual void myCameraWalk()
-    {
-        // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        float horizontal = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        float vertical = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-        transform.Translate(horizontal, 0, vertical);
-        if (Input.GetKey(KeyCode.Q))
+        protected virtual void Start()
         {
-            transform.Translate(0, -moveSpeed * Time.deltaTime, 0);
+
         }
-        if (Input.GetKey(KeyCode.E))
+
+        protected virtual void Update()
         {
-            transform.Translate(0, moveSpeed * Time.deltaTime, 0);
+            myCameraWalk();
         }
-        // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        float fov = GetComponent<Camera>().fieldOfView;
-        fov -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
-        fov = Mathf.Clamp(fov, minFov, maxFov);
-        GetComponent<Camera>().fieldOfView = fov;
-
-        // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        VisibleMouse();
-
-        // 
-        if (!isCursorVisible)
+        protected virtual void myCameraWalk()
         {
-            float mouseX = Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
+            // WASD·Î Ä«¸Ş¶ó ÀÌµ¿
+            float horizontal = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+            float vertical = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+            transform.Translate(horizontal, 0, vertical);
+            if (Input.GetKey(KeyCode.Q))
+            {
+                transform.Translate(0, -moveSpeed * Time.deltaTime, 0);
+            }
+            if (Input.GetKey(KeyCode.E))
+            {
+                transform.Translate(0, moveSpeed * Time.deltaTime, 0);
+            }
+            // ¸¶¿ì½º ÈÙ·Î È®´ë/Ãà¼Ò
+            float fov = GetComponent<Camera>().fieldOfView;
+            fov -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
+            fov = Mathf.Clamp(fov, minFov, maxFov);
+            GetComponent<Camera>().fieldOfView = fov;
 
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x - mouseY, transform.eulerAngles.y + mouseX, 0);
+            // ¿À¸¥ÂÊ ¸¶¿ì½º·Î ¸¶¿ì½º Ä¿¼­ Ç¥½Ã/¼û±â±â
+            VisibleMouse();
+
+            // 
+            if (!isCursorVisible)
+            {
+                float mouseX = Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
+                float mouseY = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
+
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x - mouseY, transform.eulerAngles.y + mouseX, 0);
+            }
         }
-    }
-    protected void VisibleMouse()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        protected void VisibleMouse()
         {
-            isCursorVisible = !isCursorVisible;
-            Cursor.visible = isCursorVisible;
-            Cursor.lockState = isCursorVisible ? CursorLockMode.None : CursorLockMode.Locked;
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                isCursorVisible = !isCursorVisible;
+                Cursor.visible = isCursorVisible;
+                Cursor.lockState = isCursorVisible ? CursorLockMode.None : CursorLockMode.Locked;
+            }
         }
     }
 }

@@ -6,20 +6,20 @@ namespace CombatGirlsCharacterPack
     public class AnimatorControl : MonoBehaviour
     {
         private Animator animator;
-        public Toggle rootMotionToggle; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        public Toggle rootMotionToggle; // Toggle UI ÄÄÆ÷³ÍÆ®¸¦ ¿¬°áÇÕ´Ï´Ù.
 
         private void Start()
         {
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // Ä³¸¯ÅÍ ÇÁ¸®ÆÕÀÇ Animator ÄÄÆ÷³ÍÆ®¿¡ Á¢±ÙÇÕ´Ï´Ù.
             animator = GetComponent<Animator>();
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // Åä±Û UIÀÇ »óÅÂ¸¦ º¯°æÇÒ ¶§¸¶´Ù ÇÔ¼ö¸¦ È£ÃâÇÕ´Ï´Ù.
             rootMotionToggle.onValueChanged.AddListener(ToggleRootMotion);
         }
 
         public void ToggleRootMotion(bool enableRootMotion)
         {
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ¾îÇÃ¶óÀÌ ·çÆ®¸ğ¼Ç ¿É¼ÇÀ» ¼³Á¤ÇÕ´Ï´Ù.
             animator.applyRootMotion = enableRootMotion;
         }
     }

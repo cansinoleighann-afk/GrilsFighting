@@ -24,7 +24,7 @@ namespace CombatGirlsCharacterPack
             isPressed = false;
             button.onClick.AddListener(OnButtonClick);
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ÃÊ±â »óÅÂ¿¡¼­´Â normalText¸¦ È°¼ºÈ­ÇÏ°í pressedText¸¦ ºñÈ°¼ºÈ­ÇÕ´Ï´Ù.
             if (normalText != null)
                 normalText.SetActive(true);
             if (pressedText != null)

@@ -37,6 +37,6 @@ This section is managed by Funplay MCP for Unity for Claude Code. Everything bet
 
 ## Project
 
-- Project root: `F:\.Untiy\Aerwen\AwCon`
+- Project root: `F:\.Untiy\Aerwen\GrilsFighting`
 - Product name: `M`
 <!-- /Funplay Unity MCP managed project skills -->

@@ -1,0 +1,30 @@
+{
+    "day_0" : {
+        "reward" : "金币",
+        "num" : 1
+    },
+    "day_1" : {
+        "reward" : "金币",
+        "num" : 2
+    },
+    "day_2" : {
+        "reward" : "金币",
+        "num" : 1
+    },
+    "day_3" : {
+        "reward" : "金币",
+        "num" : 2
+    },
+    "day_4" : {
+        "reward" : "金币",
+        "num" : 3
+    },
+    "day_5" : {
+        "reward" : "钱",
+        "num" : 3
+    },
+    "day_6" : {
+        "reward" : "物品",
+        "num" : 5
+    }
+}

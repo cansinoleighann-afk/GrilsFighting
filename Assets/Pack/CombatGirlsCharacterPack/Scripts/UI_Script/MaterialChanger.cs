@@ -5,23 +5,23 @@ namespace CombatGirlsCharacterPack
 {
     public class MaterialChanger : MonoBehaviour
     {
-        [SerializeField] private List<SkinnedMeshRenderer> characterMeshRenderers; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        [SerializeField] private List<Material> materials; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        [SerializeField] private List<SkinnedMeshRenderer> characterMeshRenderers; // ¿©·¯ SkinnedMeshRendererµéÀ» µî·ÏÇÒ ¼ö ÀÖ´Â ¸®½ºÆ®
+        [SerializeField] private List<Material> materials; // º¯°æÇÒ ¿©·¯ ¸ÓÆ¼¸®¾óÀ» µî·ÏÇÒ ¼ö ÀÖ´Â ¸®½ºÆ®
 
-        private int currentMaterialIndex = 0; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        private int currentMaterialIndex = 0; // ÇöÀç ¼±ÅÃµÈ ¸ÓÆ¼¸®¾óÀÇ ÀÎµ¦½º
 
         public void ChangeMaterial()
         {
             if (materials.Count == 0 || characterMeshRenderers.Count == 0)
-                return; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+                return; // ¸®½ºÆ®°¡ ºñ¾î ÀÖ´Â °æ¿ì, ¾Æ¹« ÀÛ¾÷µµ ÇÏÁö ¾ÊÀ½
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ÇöÀç ÀÎµ¦½º¿¡ ÇØ´çÇÏ´Â ¸ÓÆ¼¸®¾óÀ» ¸ğµç SkinnedMeshRenderer¿¡ Àû¿ë
             foreach (SkinnedMeshRenderer renderer in characterMeshRenderers)
             {
                 renderer.material = materials[currentMaterialIndex];
             }
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ´ÙÀ½ ¸ÓÆ¼¸®¾ó·Î ÀÎµ¦½º¸¦ ÀÌµ¿, ¸®½ºÆ® ³¡¿¡ µµ´ŞÇÏ¸é Ã³À½À¸·Î µ¹¾Æ°¨
             currentMaterialIndex = (currentMaterialIndex + 1) % materials.Count;
         }
     }

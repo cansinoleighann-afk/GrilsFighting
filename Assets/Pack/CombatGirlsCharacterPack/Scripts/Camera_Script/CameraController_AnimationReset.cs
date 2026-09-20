@@ -5,20 +5,20 @@ namespace CombatGirlsCharacterPack
 {
     public class CameraController_AnimationReset : MonoBehaviour
     {
-        public Transform target; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        public float distance = 10f; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        public float heightOffset = 2f; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        public float sensitivity = 5f; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        public float rotationSpeedMultiplier = 0.2f; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        public float zoomSpeed = 5f; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        public float yAdjustmentSpeed = 0.2f; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        public Transform target; // Áß½ÉÀ¸·Î ÇÒ °´Ã¼
+        public float distance = 10f; // Ä«¸Ş¶ó¿Í °´Ã¼ »çÀÌÀÇ °Å¸®
+        public float heightOffset = 2f; // Ä«¸Ş¶ó¿Í °´Ã¼ »çÀÌÀÇ ³ôÀÌ
+        public float sensitivity = 5f; // ¸¶¿ì½º °¨µµ
+        public float rotationSpeedMultiplier = 0.2f; // È¸Àü ¼Óµµ Á¶ÀıÀ» À§ÇÑ º¯¼ö
+        public float zoomSpeed = 5f; // ÁÜ ¼Óµµ
+        public float yAdjustmentSpeed = 0.2f; // y °ª Á¶Àı ¼Óµµ
 
         private float initialDistance;
         private float initialHeightOffset;
         private Vector3 initialPosition;
         private Quaternion initialRotation;
         private Vector3 initialTargetPosition;
-        private Animator targetAnimator; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        private Animator targetAnimator; // Å¸°ÙÀÇ Animator ÄÄÆ÷³ÍÆ®
 
         private float currentX = 0f;
         private float currentY = 0f;
@@ -29,19 +29,19 @@ namespace CombatGirlsCharacterPack
 
         private void Start()
         {
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ÃÊ±â Ä«¸Ş¶ó °¢µµ ¹× À§Ä¡ ¼³Á¤
             initialDistance = distance;
             initialHeightOffset = heightOffset;
             initialPosition = transform.position;
             initialRotation = transform.rotation;
             initialTargetPosition = target.position;
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ÃÊ±â Ä«¸Ş¶ó °¢µµ ¼³Á¤
             Vector3 angles = transform.eulerAngles;
             currentX = angles.y;
             currentY = angles.x;
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // Å¸°ÙÀÇ Animator ÄÄÆ÷³ÍÆ® °¡Á®¿À±â
             if (target != null)
             {
                 targetAnimator = target.GetComponent<Animator>();
@@ -50,16 +50,16 @@ namespace CombatGirlsCharacterPack
 
         private void Update()
         {
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // UI ¿ä¼Ò¿ÍÀÇ Ãæµ¹À» È®ÀÎÇÏ°í ¹«½ÃÇÏ±â
             if (EventSystem.current.IsPointerOverGameObject())
             {
-                // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+                // ¸¶¿ì½º°¡ UI ¿ä¼Ò À§¿¡ ÀÖÀ¸¸é Ä«¸Ş¶ó ÄÁÆ®·Ñ µ¿ÀÛÀ» ¹«½Ã
                 //isDragging = false;
                 //isMiddleClickDragging = false;
                 //return;
             }
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ¸¶¿ì½º ÀÔ·Â ¹Ş±â
             if (Input.GetMouseButtonDown(0))
             {
                 isDragging = true;
@@ -80,7 +80,7 @@ namespace CombatGirlsCharacterPack
                 isMiddleClickDragging = false;
             }
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ¸¶¿ì½º µå·¡±×·Î Ä«¸Ş¶ó È¸ÀüÇÏ±â
             if (isDragging)
             {
                 Vector3 difference = Input.mousePosition - dragOrigin;
@@ -90,15 +90,15 @@ namespace CombatGirlsCharacterPack
                 currentY = Mathf.Clamp(currentY, -90f, 90f);
             }
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ¸¶¿ì½º Áß°£ ¹öÆ° µå·¡±×·Î y °ª Á¶ÀıÇÏ±â
             if (isMiddleClickDragging)
             {
                 float yDifference = (Input.mousePosition.y - middleClickDragOriginY) * yAdjustmentSpeed * Time.deltaTime;
-                heightOffset -= yDifference; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-                middleClickDragOriginY = Input.mousePosition.y; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+                heightOffset -= yDifference; // heightOffsetÀ» Á¶ÀıÇÏ¿© Ä«¸Ş¶óÀÇ ³ôÀÌ¸¸ º¯°æ
+                middleClickDragOriginY = Input.mousePosition.y; // ¿øÁ¡À» ¾÷µ¥ÀÌÆ®
             }
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ÁÜ ÀÎ/¾Æ¿ô Ã³¸®
             float zoomInput = Input.GetAxis("Mouse ScrollWheel");
             if (zoomInput != 0f)
             {
@@ -106,13 +106,13 @@ namespace CombatGirlsCharacterPack
                 distance = Mathf.Clamp(distance, 1f, 100f);
             }
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ¿ìÅ¬¸¯À¸·Î ¸®¼ÂÇÏ±â
             if (Input.GetMouseButtonDown(1))
             {
                 ResetCamera();
             }
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // Ä«¸Ş¶ó À§Ä¡¿Í È¸Àü ¾÷µ¥ÀÌÆ®
             Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
             Vector3 offset = new Vector3(0f, heightOffset, 0f);
             transform.position = target.position + offset - rotation * Vector3.forward * distance;
@@ -129,7 +129,7 @@ namespace CombatGirlsCharacterPack
             currentY = initialRotation.eulerAngles.x;
             target.position = initialTargetPosition;
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // Å¸°ÙÀÇ ¾Ö´Ï¸ŞÀÌ¼Ç ¸®¼Â
             if (targetAnimator != null)
             {
                 targetAnimator.Play(targetAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash, -1, 0f);

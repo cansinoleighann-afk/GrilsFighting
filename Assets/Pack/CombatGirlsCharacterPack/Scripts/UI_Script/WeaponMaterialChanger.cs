@@ -4,25 +4,25 @@ namespace CombatGirlsCharacterPack
 {
     public class WeaponMaterialChanger : MonoBehaviour
     {
-        // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        // º¯°æÇÒ ¸ÓÅ×¸®¾ó ¹è¿­
         public Material[] materials;
-        // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        // º¯°æÇÒ 3D ¿ÀºêÁ§Æ® (¿¹: ¹«±â)
         public GameObject targetObject;
 
-        // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        // ÇöÀç ¼±ÅÃµÈ ¸ÓÅ×¸®¾ó ÀÎµ¦½º
         private int currentMaterialIndex = 0;
 
-        // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        // ¹öÆ° Å¬¸¯ ½Ã È£ÃâÇÒ ÇÔ¼ö
         public void ChangeMaterial()
         {
             if (materials.Length == 0 || targetObject == null) return;
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // MeshRenderer ÄÄÆ÷³ÍÆ® °¡Á®¿À±â
             MeshRenderer renderer = targetObject.GetComponent<MeshRenderer>();
 
             if (renderer != null)
             {
-                // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+                // ´ÙÀ½ ¸ÓÅ×¸®¾ó·Î º¯°æ
                 currentMaterialIndex = (currentMaterialIndex + 1) % materials.Length;
                 renderer.material = materials[currentMaterialIndex];
             }

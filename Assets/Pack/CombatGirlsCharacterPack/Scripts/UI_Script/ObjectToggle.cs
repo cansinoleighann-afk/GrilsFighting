@@ -5,21 +5,21 @@ namespace CombatGirlsCharacterPack
 {
     public class ObjectToggle : MonoBehaviour
     {
-        [SerializeField] private List<GameObject> objects; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
-        private int currentIndex = 0; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+        [SerializeField] private List<GameObject> objects; // È°¼ºÈ­/ºñÈ°¼ºÈ­ÇÒ °ÔÀÓ ¿ÀºêÁ§Æ® ¸®½ºÆ®
+        private int currentIndex = 0; // ÇöÀç È°¼ºÈ­µÈ ¿ÀºêÁ§Æ®ÀÇ ÀÎµ¦½º
 
         public void ToggleObjects()
         {
             if (objects.Count == 0)
-                return; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+                return; // ¸®½ºÆ®°¡ ºñ¾î ÀÖ´Â °æ¿ì, ¾Æ¹« ÀÛ¾÷µµ ÇÏÁö ¾ÊÀ½
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ÇöÀç È°¼ºÈ­µÈ ¿ÀºêÁ§Æ®¸¦ ºñÈ°¼ºÈ­
             objects[currentIndex].SetActive(false);
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ´ÙÀ½ ¿ÀºêÁ§Æ®·Î ÀÎµ¦½º¸¦ ÀÌµ¿, ¸®½ºÆ® ³¡¿¡ µµ´ŞÇÏ¸é Ã³À½À¸·Î µ¹¾Æ°¨
             currentIndex = (currentIndex + 1) % objects.Count;
 
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // ´ÙÀ½ ¿ÀºêÁ§Æ®¸¦ È°¼ºÈ­
             objects[currentIndex].SetActive(true);
         }
     }

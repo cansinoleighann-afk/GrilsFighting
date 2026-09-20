@@ -16,14 +16,14 @@ namespace CombatGirlsCharacterPack
 
         private void Start()
         {
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // °¢ ±×·ì¿¡ ´ëÇØ Å¬¸¯ ÀÌº¥Æ® ÇÚµé·¯¸¦ ¿¬°áÇÕ´Ï´Ù.
             for (int groupIndex = 0; groupIndex < objectGroups.Length; groupIndex++)
             {
                 ObjectGroup group = objectGroups[groupIndex];
 
                 for (int buttonIndex = 0; buttonIndex < group.buttons.Length; buttonIndex++)
                 {
-                    int buttonIdx = buttonIndex; // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+                    int buttonIdx = buttonIndex; // Å¬·ÎÀú¿¡¼­ ¿Ã¹Ù¸¥ ¹öÆ° ÀÎµ¦½º¸¦ »ç¿ëÇÏ±â À§ÇØ º¯¼ö¸¦ ¸¸µì´Ï´Ù.
                     group.buttons[buttonIdx].onClick.AddListener(() => ToggleObject(group, buttonIdx));
                 }
             }
@@ -31,11 +31,11 @@ namespace CombatGirlsCharacterPack
 
         private void ToggleObject(ObjectGroup group, int buttonIndex)
         {
-            // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+            // Å¬¸¯µÈ ¹öÆ°¿¡ ÇØ´çÇÏ´Â ¿ÀºêÁ§Æ®¸¦ ÄÑ°Å³ª ²ü´Ï´Ù.
             if (buttonIndex >= 0 && buttonIndex < group.objectsToToggle.Length)
             {
                 GameObject obj = group.objectsToToggle[buttonIndex];
-                obj.SetActive(!obj.activeSelf); // å·²ä¿®å¤ç¼–ç ä¹±ç çš„æ³¨é‡Šã€‚
+                obj.SetActive(!obj.activeSelf); // ÇöÀç »óÅÂ¸¦ ¹İ´ë·Î º¯°æÇÕ´Ï´Ù.
             }
         }
     }

@@ -36,7 +36,7 @@ This section is managed by Funplay MCP for Unity. Everything between the begin a
 
 ## Project
 
-- Project root: `F:\.Untiy\Aerwen\AwCon`
+- Project root: `F:\.Untiy\Aerwen\GrilsFighting`
 - Product name: `M`
 
 ## Notes

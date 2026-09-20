@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2b1f3dd42b6cf468fc5159281eee01, type: 3}
+  m_Name: 8ManD_Animancer
+  m_EditorClassIdentifier: 
+  idle: {fileID: 7400000, guid: fb742b3f1ec443d880ee1f28ce3ac434, type: 2}
+  walk: {fileID: 7400000, guid: 7482b7bcbbc540fa9e6692be4c1f5246, type: 2}
+  jump: {fileID: 7400000, guid: 93742d6db665403d84e3d4ac89f46f9c, type: 2}
+  guard: {fileID: 7400000, guid: 314a10796e9c407899af17b669607408, type: 2}
+  knockdown: {fileID: 7400000, guid: d65a093100e6458fb3a11c1536905378, type: 2}
+  standUp: {fileID: 7400000, guid: 9cca061649a64e6eba21cf0b6af4f320, type: 2}
+  pickup: {fileID: 7400000, guid: dbf47dc0922b44e2bb88985afced8226, type: 2}

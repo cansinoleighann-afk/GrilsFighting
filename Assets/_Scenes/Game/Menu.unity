@@ -145,7 +145,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &9999993
 LightmapSettings:
@@ -15627,8 +15627,8 @@ MonoBehaviour:
   m_SendPointerHoverToParent: 1
   m_HorizontalAxis: cfEmpty
   m_VerticalAxis: cfEmpty
-  m_SubmitButton: cfEmpty
-  m_CancelButton: cfEmpty
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
@@ -15834,9 +15834,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1790076503153552699}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 9038340091698133828}
+        m_TargetAssemblyTypeName: AwCon.UI.SceneButton, Assembly-CSharp
+        m_MethodName: Load
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25837,7 +25837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7700423335126763722
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28993,6 +28993,7 @@ GameObject:
   - component: {fileID: 3164783058653267223}
   - component: {fileID: 3331828036982437362}
   - component: {fileID: 7585649206426211857}
+  - component: {fileID: 9038340091698133828}
   m_Layer: 5
   m_Name: PlayBNT
   m_TagString: 
@@ -29000,6 +29001,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9038340091698133828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9038340091698133827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f673c59e9cc82804191cba01d42a263e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Level
 --- !u!1 &9039074149891308979
 GameObject:
   m_ObjectHideFlags: 0

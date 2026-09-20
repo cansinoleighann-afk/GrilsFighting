@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8feb26183a2902544bb7ab5ff7830faa, type: 3}
+  m_Name: Level01
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: aa652af2aaa292348a52672525c87e3d, type: 2}
+  enemy: {fileID: 11400000, guid: 53176abe63e750a4aa5043c86febbbae, type: 2}
+  boss: {fileID: 11400000, guid: 8ae749646502af246a58bce285195950, type: 2}
+  environmentPrefab: {fileID: 1790076503153551782, guid: 77c6082c10b349aa95cccbff4d9ce4fe,
+    type: 3}
+  playerSpawnPosition: {x: -2, y: 0, z: 0}
+  enemySpawnPosition: {x: 2, y: 0, z: -1}
+  waves:
+  - enemies: 2
+    boss: 0
+  - enemies: 1
+    boss: 1
+  xBounds: {x: -9, y: 9}
+  zBounds: {x: -3, y: 3}
