@@ -357,6 +357,36 @@ namespace AwCon
         public override float CurrentTime => GetLayerTime(0);
         public override float CurrentNormalizedTime => GetLayerNormalizedTime(0);
 
+        /// <summary>
+        /// 当前驱动基础层的 Clip，没有在播时返回 null。
+        /// 调用方用它避免把同一个 Clip 从头重播导致的动作抽动。
+        /// </summary>
+        public AnimationClip CurrentClip
+        {
+            get
+            {
+                EnsureAnimancer();
+                if (_animancer == null) return null;
+                return _animancer.Layers[0].CurrentState?.Clip;
+            }
+        }
+
+        /// <summary>
+        /// 基础层是否正播着一个已经跑过头的非循环 Clip。
+        /// Animancer 不会自动停掉播完的 Clip（结束事件只是回调，
+        /// 停不掉动画），所以这是调用方判断"这个一次性动作已经结束"的唯一依据。
+        /// </summary>
+        public bool HasCurrentClipFinished()
+        {
+            EnsureAnimancer();
+            if (_animancer == null) return false;
+
+            var state = _animancer.Layers[0].CurrentState;
+            if (state == null || state.Clip == null || state.Clip.isLooping) return false;
+
+            return state.NormalizedTime >= 1f;
+        }
+
         public override float GetLayerTime(int layerIndex)
             => GetLayerOrFallback(layerIndex).CurrentState?.Time ?? 0f;
 

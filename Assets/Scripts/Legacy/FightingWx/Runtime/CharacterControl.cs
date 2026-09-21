@@ -408,6 +408,7 @@ public class CharacterControl : MonoBehaviour
 				_attackEndsAt = -1f;
 				ToIDLE();
 			}
+			WatchdogResolveFinishedOneShot();
 			if (_state != AnimStates.ATTACK && _state != AnimStates.PICK && _state != AnimStates.LIFT)
 			{
 				_attackLock = false;
@@ -453,6 +454,29 @@ public class CharacterControl : MonoBehaviour
 			_myTransform.position = position;
 		}
 		ProtectFromFallingThroughGround();
+	}
+
+	// 兜底：Animancer 的结束事件是回调，动画本身不会自己停。
+	// 万一回调没触发（Clip 被打断、淡入被后续动作抢走、回调被清掉），
+	// 或者负责收尾的协程根本没跑起来（被 StopAllCoroutines 打断等），
+	// 角色就会一直保持那个一次性动画的最后一帧。
+	// 老状态机不会出现这种情况，因为它的 exit-time 转移由状态机自己驱动。
+	// 这里直接看 Clip 有没有播完来补上这个缺口。
+	// 不含 LIFT：搬起结束后要停在"搬东西"的 overwrite 姿态上。
+	private bool IsUnresolvedOneShotState()
+	{
+		return _state == AnimStates.ATTACK
+			|| _state == AnimStates.HIT
+			|| _state == AnimStates.PICK
+			|| _state == AnimStates.STANDINGUP;
+	}
+
+	private void WatchdogResolveFinishedOneShot()
+	{
+		if (_dontRun || !IsUnresolvedOneShotState()) return;
+		if (_animancerBridge == null) return;
+		if (!_animancerBridge.HasCurrentClipFinished()) return;
+		ToIDLE();
 	}
 
 	private void ResolveAirborneState()
@@ -1834,6 +1858,15 @@ public class CharacterControl : MonoBehaviour
 		_state = AnimStates.IDLE;
 		SetAnimBool("KnockingDown", tf: false);
 		SetAnimBool("JumpAttacking", tf: false);
+		// 老 Animator 状态机在这里靠 "状态 -> idles" 的 exit-time 转移把角色送回待机，
+		// Animancer 直接播 Clip、没有状态图也不会自己停掉播完的 Clip，
+		// 所以必须由这里显式把待机 Clip 播起来。
+		// 缺了这一步，攻击/受击/起身/拾取/抓取释放之后角色会一直保持最后一帧。
+		// 移动中的角色下一帧会被 SetLocomotion 自动接回 Walk，不会卡住。
+		if (_animancerBridge != null)
+		{
+			_animancerBridge.PlayIdle();
+		}
 		if ((bool)_enemyControl && _enemyControl._dontMove)
 		{
 			_enemyControl._dontMove = false;

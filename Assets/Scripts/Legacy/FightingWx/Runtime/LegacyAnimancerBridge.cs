@@ -41,10 +41,40 @@ public sealed class LegacyAnimancerBridge : MonoBehaviour
         Play(moving ? walk : idle, 1f, fadeDuration);
     }
 
+    /// <summary>
+    /// 回归待机姿态。
+    /// 老 Animator 状态机是靠 "Attack/Reaction/PickUp/StandUp/... -> idles" 的
+    /// exit-time 转移自动回待机的；Animancer 直接播 Clip，既没有状态图也不会
+    /// 自己停掉播完的 Clip，所以必须由控制脚本显式把待机 Clip 播起来。
+    /// 少了这一步，角色就会一直定格在刚才那个一次性动画的最后一帧。
+    /// </summary>
     public void PlayIdle()
     {
         moving = false;
+        // 已经是待机就别重播，否则每次状态回收都会把待机动画抽回第 0 帧
+        if (IsShowing(idle)) return;
         Play(idle, 1f, fadeDuration);
+    }
+
+    /// <summary>
+    /// 基础层当前是否正在播这条 Clip。
+    /// </summary>
+    public bool IsShowing(AnimationClip clip)
+    {
+        if (clip == null) return false;
+        if (facade == null) facade = GetComponent<AnimancerFacade>();
+        return facade != null && facade.CurrentClip == clip;
+    }
+
+    /// <summary>
+    /// 基础层的非循环 Clip 是否已经播完。
+    /// 供上层做兜底：结束回调万一没触发（被打断、淡入被抢、回调被清掉），
+    /// 也不会把角色永久锁在某个动作的最后一帧上。
+    /// </summary>
+    public bool HasCurrentClipFinished()
+    {
+        if (facade == null) facade = GetComponent<AnimancerFacade>();
+        return facade != null && facade.HasCurrentClipFinished();
     }
 
     public void Play(AnimationO source, Action onEnd = null)
